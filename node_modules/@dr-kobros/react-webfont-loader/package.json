@@ -1,0 +1,58 @@
+{
+  "name": "@dr-kobros/react-webfont-loader",
+  "version": "8.0.0",
+  "description": "Webfontloader for React",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint src",
+    "build": "NODE_ENV=production babel src -d lib",
+    "prepublish": "npm run build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/pekkis/react-webfont-loader.git"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.2.6",
+    "@storybook/addon-links": "^3.2.6",
+    "@storybook/react": "^3.2.8",
+    "babel-cli": "^6.16.0",
+    "babel-eslint": "^7.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.6.0",
+    "eslint-config-react-app": "^2.0.0",
+    "eslint-plugin-flowtype": "^2.34.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "react": "^15.0",
+    "react-dom": "^15.0",
+    "styled-components": "^2.1.2"
+  },
+  "peerDependencies": {
+    "react": "^15.0 || ^16.0",
+    "react-dom": "^15.0 || ^16.0"
+  },
+  "keywords": [
+    "React",
+    "Webfontloader",
+    "Fonts",
+    "Webfonts"
+  ],
+  "author": "pekkis",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://gitlab.com/pekkis/react-webfont-loader/issues"
+  },
+  "homepage": "https://gitlab.com/pekkis/react-webfont-loader#readme",
+  "dependencies": {
+    "prop-types": "^15.5.8",
+    "webfontloader": "^1.6.27"
+  }
+}
