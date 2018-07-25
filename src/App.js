@@ -43,7 +43,7 @@ class App extends Component {
       fontWeight:800,
       color: 'white',
       textShadow: '2px 2px 8px rgba(0, 0, 0, 0.5)',
-      transform: 'rotate(-15deg)',
+      // transform: 'rotate(-15deg)',
       letterSpacing: '-2.5px'
     }
     return (
