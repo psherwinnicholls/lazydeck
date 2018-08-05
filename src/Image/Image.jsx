@@ -33,11 +33,13 @@ class Image extends Component {
 
   Load(query){
       // API key for unsplash
-      let newImage = 'https://source.unsplash.com/600x300/?' + query;
+      let newURL
+      newURL = 'https://source.unsplash.com/600x300/?' + query
       this.setState({
         // change the image
-        image: newImage,
+        image: newURL,
       })
+
     }
 
   render() {
@@ -45,16 +47,14 @@ class Image extends Component {
     let fullscreen = {
       width:'100vw',
       height:'100vh',
-      backgroundImage:'url(' + this.state.image + ')',
-      backgroundSize:'cover',
-      backgroundPosition:'center',
       filter: 'brightness(80%)',
       position:'absolute',
       zIndex: -1
     }
 
     return (
-      <div style={fullscreen}>
+      <div>
+        <img style={fullscreen} src={this.state.image} alt='hello'/>
       </div>
     );
   }
