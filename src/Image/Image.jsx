@@ -3,8 +3,10 @@ import React, { Component } from 'react';
 class Image extends Component {
   constructor(props){
     super(props)
+    // set the default start content
     this.state = {
-      image: 'https://images.unsplash.com/photo-1531903941236-b67dd2867cff?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=87b1a60dd5fcfe49436106827c96a241&auto=format&fit=crop&w=946&q=80'
+      image: 'https://images.pexels.com/photos/893892/pexels-photo-893892.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      query: 'lazy deck placeholder',
     }
     this.Load = this.Load.bind(this)
   }
@@ -17,13 +19,10 @@ class Image extends Component {
         // there will be a query
         let query;
         // only when something has been said
-        if(this.props.transcript.length === 0){
-          // if nothing has been said get a waiting image
-          query = "waiting";
-          this.Load(query);
-        }else{
+        if(this.props.transcript.length !== 0){
           // if something has been said, get the last word that was said
           query = this.props.transcript.split(" ").slice(-1);
+          // go get the new image
           this.Load(query);
         }
       },
@@ -32,19 +31,20 @@ class Image extends Component {
   }
 
   Load(query){
-      // API key for unsplash
-      let newURL
-      newURL = 'https://source.unsplash.com/600x300/?' + query
+      // create the new url
+      let newURL = 'https://source.unsplash.com/600x300/?' + query
+      // let's set the state
       this.setState({
         // change the image
         image: newURL,
+        query: query
       })
 
     }
 
   render() {
-    // define the image styles
-    let fullscreen = {
+    // image styles
+    let fullscreenImage = {
       width:'100vw',
       height:'100vh',
       filter: 'brightness(80%)',
@@ -54,7 +54,7 @@ class Image extends Component {
 
     return (
       <div>
-        <img style={fullscreen} src={this.state.image} alt='hello'/>
+        <img style={fullscreenImage} src={this.state.image} alt={this.state.query}/>
       </div>
     );
   }
