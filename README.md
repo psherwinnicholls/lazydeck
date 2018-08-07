@@ -1,6 +1,8 @@
 # LazyDeck
 Automatically create decks with your voice
 
+![LazyDeck GIF](https://github.com/psherwinnicholls/lazydeck/blob/master/lazydeck.gif?raw=true)
+
 ## Pre-requesites
 - Download node
 - Download yarn
