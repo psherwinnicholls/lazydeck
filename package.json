@@ -10,6 +10,7 @@
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4",
     "react-speech-recognition": "^1.0.6",
+    "react-textfit": "^1.1.0",
     "react-typist": "^2.0.4",
     "react-unsplash-container": "^1.1.0"
   },

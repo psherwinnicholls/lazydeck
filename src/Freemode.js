@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import SpeechRecognition from 'react-speech-recognition'
 import WebfontLoader from '@dr-kobros/react-webfont-loader';
-import {Textfit} from 'react-textfit'
+
 // Internal
 import Image from './Image/Image';
 
@@ -13,22 +13,9 @@ const config = {
   }
 };
 
-class App extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      text: 'Start Talking',
-      image: 'https://images.pexels.com/photos/893892/pexels-photo-893892.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    }
-  }
 
-  handleClick(phrase){
-    console.log(this.state.text)
-    this.setState({
-      text: phrase,
-      image: phrase
-    })
-  }
+
+class App extends Component {
 
   render() {
     const { transcript, browserSupportsSpeechRecognition } = this.props
@@ -44,12 +31,12 @@ class App extends Component {
     var textContainer = {
       position: 'fixed',
       height: '100vh',
-      width: '100vh',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center'
     }
     var textStyles = {
+      width:'100vw',
       textAlign:'center',
       fontSize:'6em',
       fontFamily: "'Work Sans', sans-serif",
@@ -60,13 +47,11 @@ class App extends Component {
     }
     return (
       <WebfontLoader config={config}>
-        <div onClick={() => this.handleClick(this.props.transcript.split(" ").slice(-2).join(" "))} style={normalise}>
+        <div style={normalise}>
           <div style={textContainer}>
-            <Textfit style={textStyles} mode="multi">
-              {this.props.transcript}
-            </Textfit>
+            <h1 style={textStyles}>{this.props.transcript ? this.props.transcript.split(" ").slice(-2).join(" ") : "Start Talking..."}</h1>
           </div>
-          <Image image={this.state.image} transcript={this.state.text}/>
+          <Image transcript={transcript}/>
         </div>
       </WebfontLoader>
     );

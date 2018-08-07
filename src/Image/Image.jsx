@@ -5,7 +5,7 @@ class Image extends Component {
     super(props)
     // set the default start content
     this.state = {
-      image: 'https://images.pexels.com/photos/893892/pexels-photo-893892.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      image: this.props.image,
       query: 'lazy deck placeholder',
     }
     this.Load = this.Load.bind(this)
