@@ -1,5 +1,6 @@
 # LazyDeck
-Automatically create decks with your voice
+Automatically create decks with your voice <br/>
+**[See Demo](https://psherwinnicholls.github.io/lazydeck/)**
 
 ![LazyDeck GIF](https://github.com/psherwinnicholls/lazydeck/blob/master/lazydeck.gif?raw=true)
 
