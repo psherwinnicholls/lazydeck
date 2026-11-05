@@ -20,6 +20,6 @@ Automatically create decks with your voice <br/>
 
 ## Tech
 - Built using [Create React App](https://github.com/facebook/create-react-app)
-- Special thanks to [Unsplash](https://unsplash.com/)
+- Images from [Pexels](https://www.pexels.com/) (set `REACT_APP_PEXELS_API_KEY` in a `.env` file with a [free API key](https://www.pexels.com/api/)), falling back to [LoremFlickr](https://loremflickr.com/) when no key is set
 - Hosted on [Github Pages](https://pages.github.com/)
 - Uses [Work Sans from Google Fonts](https://fonts.google.com/specimen/Work+Sans)
